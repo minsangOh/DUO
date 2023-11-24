@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품별 금리 그래프</title>
+</head>
+<body>
+    <h2>상품별 금리 그래프</h2>
+    {% if save_graphic %}
+        <h3>적금 상품 금리 그래프</h3>
+        <img src="data:image/png;base64,{{ save_graphic }}" alt="적금 금리 그래프"/>
+    {% else %}
+        <p>적금 상품 그래프를 표시할 데이터가 없습니다.</p>
+    {% endif %}
+
+    {% if deposit_graphic %}
+        <h3>예금 상품 금리 그래프</h3>
+        <img src="data:image/png;base64,{{ deposit_graphic }}" alt="예금 금리 그래프"/>
+    {% else %}
+        <p>예금 상품 그래프를 표시할 데이터가 없습니다.</p>
+    {% endif %}
+</body>
+</html>
